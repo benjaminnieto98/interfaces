@@ -1,0 +1,247 @@
+/*--------------------------------------------------consigna 7----------------------------------*/
+.edificios {
+    /*hace los edificios invisibles y los posiciona en otra lugar*/
+    transform: translateY(100px);
+    opacity: 0;
+    filter: blur(5px);
+    transition: all 2s;
+}
+
+.showEdificios {
+    /*muestra los edificios con una animacion*/
+    transform: translateY(0px);
+    opacity: 1;
+    filter: blur(0);
+}
+
+.img-spiders {
+    /*hace las tealarañas invisibles y los posiciona en otra lugar*/
+    transform: translateY(200px);
+    opacity: 0;
+    transition: all 3s;
+}
+
+.showArañas {
+    /*muestra las telarañas con una animacion*/
+    transform: translateY(0px);
+    opacity: 1;
+    filter: blur(0);
+}
+
+.telarañas {
+    /*hace las tealarañas invisibles y los posiciona en otra lugar*/
+    transform: translateY(200px);
+    opacity: 0;
+    transition: all 3s;
+}
+
+.showTelarañas {
+    /*muestra las telarañas con una animacion*/
+    transform: translateY(0px);
+    opacity: 1;
+    filter: blur(0);
+}
+
+/*------------------------------------------------consigna 9-------------------------------------*/
+.cards-personajes {
+    transform: translateY(200px);
+    opacity: 0;
+    transition: all 3s;
+}
+
+.showPersonajes {
+    transform: translateY(0px);
+    opacity: 1;
+    filter: blur(1);
+}
+
+.cards-personajes:nth-child(1),
+.cards-personajes:nth-child(2) {
+    transition-delay: 0.2s;
+    /* Retraso para la primera imagen */
+}
+
+/* Segunda imagen */
+.cards-personajes:nth-child(3),
+.cards-personajes:nth-child(4) {
+    transition-delay: 0.4s;
+    /* Retraso para la segunda imagen */
+}
+
+/* Tercera imagen */
+.cards-personajes:nth-child(5),
+.cards-personajes:nth-child(6) {
+    transition-delay: 0.6s;
+    /* Retraso para la tercera imagen */
+}
+
+/*----------------------------------------consigna 11---------------------------*/
+#race1,
+#race2,
+#race3 {
+    transition: transform 0.3s ease;
+}
+
+#race1:hover,
+#race2:hover,
+#race3:hover {
+    transform: translateZ(30px);
+    transform: scale(1.1);
+}
+
+/*----------------------------------------consigna 12--------------------------------*/
+.tres-spider {
+    filter: blur(0);
+    /* Por defecto, no tiene desenfoque */
+    transition: transform 0.4s ease-in-out;
+}
+
+.borroso {
+    filter: blur(5px);
+    /* Aplica el desenfoque */
+}
+
+.agrandar {
+    transform: scale(1.2);
+    /* Aumenta el tamaño */
+}
+
+#tres-spiders-fondo1 {
+    top: 6275px;
+    width: 1280px;
+    height: 841.639px;
+    flex-shrink: 0;
+    position: absolute;
+    background-image: url("./imagenes/prueba3.png");
+    z-index: 2;
+}
+
+/*--------------------------------------consigna 10--------------------------------------*/
+#btn-comprar:hover,
+#btn-comprar-ahora:hover {
+    background: #2982ff;
+    border: 8px solid var(--2982-ff, #ffe901);
+    transform: scale(1.1);
+    /* Aumentar tamaño al pasar el ratón */
+    box-shadow: 0px 0px 0px 0px;
+}
+
+#cielo1 {
+    position: absolute;
+    width: 1280px;
+    height: auto;
+    /* Puedes ajustar la altura según sea necesario */
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+    background-image: url("./imagenes/cielo1.png");
+    background-size: cover;
+    /* Ajusta el tamaño de la imagen */
+    background-repeat: repeat-y;
+    /* Repetir verticalmente */
+    background-position: center top;
+    /* Posición inicial */
+}
+
+/*-------------------------------consigna 4----------------------*/
+
+/*---------------------------------consigna 13---------------------------*/
+#venom {
+    /*animacion venom normal*/
+    top: 7963px;
+    left: 930px;
+    position: absolute;
+    width: 180px;
+    height: 90px;
+    margin: auto;
+    background: url(./imagenes/venom2.png) repeat-x;
+    animation: spriteVenom2 0.9s steps(6) infinite;
+    /*tiene 6 steps(imagenes)y dura 0.9segundos*/
+}
+
+#venom:hover {
+    /*animacion venom on hover*/
+    top: 7959px;
+    left: 930px;
+    position: absolute;
+    width: 110px;
+    height: 90px;
+    margin: auto;
+    background: url(./imagenes/venom1.png) repeat-x;
+    animation: spriteVenom 0.9s steps(7) infinite;
+    /*tiene 7 steps(imagenes)y dura 0.9segundos*/
+}
+
+#spider-sprite {
+    /*animacion spider normal*/
+    top: 7940px;
+    left: 1060px;
+    position: absolute;
+    width: 80px;
+    height: 110px;
+    margin: auto;
+    background: url(./imagenes/spider-sprite1.png) repeat-x;
+    animation: spriteSpider1 2s steps(12) infinite;
+    /*tiene 12 steps(imagenes)y dura 0.9segundos*/
+}
+
+#spider-sprite:hover {
+    /*animacion spider on hover*/
+    top: 7910px;
+    left: 900px;
+    position: absolute;
+    width: 280px;
+    height: 140px;
+    margin: auto;
+    background: url(./imagenes/spider-sprite2.png) repeat-x;
+    animation: spriteSpider2 1.2s steps(7) infinite;
+    /*tiene 7 steps(imagenes)y dura 0.9segundos*/
+}
+
+@keyframes spriteSpider1 {
+    0% {
+        background-position: 0;
+    }
+
+    100% {
+        background-position: -960px;
+        /*total largo imagen*/
+    }
+}
+
+@keyframes spriteSpider2 {
+    0% {
+        background-position: 0;
+    }
+
+    100% {
+        background-position: -1960px;
+        /*total largo imagen*/
+    }
+}
+
+@keyframes spriteVenom {
+
+    /*animacion venom normal*/
+    0% {
+        background-position: 0;
+    }
+
+    100% {
+        background-position: -770px;
+        /*total largo imagen*/
+    }
+}
+
+@keyframes spriteVenom2 {
+    0% {
+        background-position: 0;
+    }
+
+    100% {
+        background-position: -1080px;
+        /*total largo imagen*/
+    }
+}
