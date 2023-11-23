@@ -1,12 +1,6 @@
-document.addEventListener(function () {
-    // Muestra el loader al principio
-    document.getElementById("loader-wrapper").style.display = "flex";
 
-    // Espera 5 segundos y luego oculta el loader
-    setTimeout(function () {
-        document.getElementById("loader-wrapper").style.animation = "fadeOut 0.5s ease-in-out";
-    }, 2000); // 5000 milisegundos = 5 segundos
-});
+// Muestra el loader al principio
+document.getElementById("loader-wrapper").style.display = "flex";
 
 window.addEventListener('load', () => {
     const peter = document.getElementById('img-spider2')
@@ -110,17 +104,17 @@ images.forEach((image) => {
 
         const imagenSeleccionada = event.target.id;
         if (imagenSeleccionada === 'tres-spiders-gwen') {
-            fondo3spiders.src = './imagenes/3spidersFondo1.svg'
+            fondo3spiders.src = './images/3spidersFondo1.svg'
             fondo3spiders.id = 'tres-spiders-fondo1';
             fondo3spiders.style.transition = 'all 0.3s ease';
         } else if (imagenSeleccionada === 'tres-spiders-peter') {
-            fondo3spiders.src = './imagenes/3spidersFondo2.svg'
+            fondo3spiders.src = './images/3spidersFondo2.svg'
             fondo3spiders.classList.add('tres-spiders-fondo1');
             fondo3spiders.id = 'tres-spiders-fondo1';
             fondo3spiders.style.transition = 'all 0.3s ease';
 
         } else if (imagenSeleccionada === 'tres-spiders-miles') {
-            fondo3spiders.src = './imagenes/3spidersFondo3.svg'
+            fondo3spiders.src = './images/3spidersFondo3.svg'
             fondo3spiders.id = 'tres-spiders-fondo1';
             fondo3spiders.classList.add('tres-spiders-fondo1');
         }
@@ -135,7 +129,7 @@ images.forEach((image) => {
 
     image.addEventListener('mouseleave', function () {
         images.forEach((img) => {
-            fondo3spiders.src = './imagenes/3spidersFondo.svg'
+            fondo3spiders.src = './images/3spidersFondo.svg'
             fondo3spiders.classList.remove('tres-spiders-fondo1');
             fondo3spiders.id = 'fondo-tres-spiders'
             img.classList.remove('borroso'); // Elimina la clase blur para quitar el desenfoque
